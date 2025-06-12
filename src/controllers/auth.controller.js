@@ -5,10 +5,10 @@ exports.signup = async (req, res, next) => {
     const { name, email, password } = req.body;
     const user = await authService.signupUser(name, email, password);
 
-    res.status(201).json({
-      message: "User created successfully",
-      user: { id: user.id, name: user.name, email: user.email },
-    });
+    // res.status(201).json({
+    //   message: "User created successfully",
+    //   user: { id: user.id, name: user.name, email: user.email },
+    // });
     res.redirect("http://127.0.0.1:5500/jul25thdiginexuswebsite-main/login.html");
   } catch (error) {
     next(error);
