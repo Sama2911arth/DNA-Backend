@@ -63,7 +63,7 @@ exports.requestPasswordReset = async (req, res, next) => {
 
 
 
-    const resetUrl = `http://192.168.100.79:5501/reset-password.html?token=${token}`;
+    const resetUrl = `http://127.0.0.1:5500/jul25thdiginexuswebsite-main/reset-password.html?token=${token}`;
 
     await sendEmail({
       to: email,
